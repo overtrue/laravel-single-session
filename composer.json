@@ -1,0 +1,28 @@
+{
+    "name": "overtrue/laravel-single-session",
+    "description": "A plugin provide single session authentication for Laravel 5.",
+    "type": "library",
+    "require": {
+        "laravel/framework": "~5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "overtrue",
+            "email": "anzhengchao@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4":{
+            "Overtrue\\LaravelSingleSession\\": "./src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "LaravelSingleSessionMiddleware": "Overtrue\\LaravelSingleSession\\Middleware\\SingleSession"
+            },
+            "providers": ["Overtrue\\LaravelSingleSession\\SingleSessionServiceProvider"]
+        }
+    }
+}
