@@ -35,7 +35,7 @@ class ClearLastSession
         if (config('session.last_session_storage', 'cache')) {
             $previousSessionId = Cache::pull($lastSessionField.'.'.$event->user->id);
             Session::getHandler()->destroy($previousSessionId);
-            Event::fire(new SessionDestroyed($event->user, $previousSessionId));
+            Event::dispatch(new SessionDestroyed($event->user, $previousSessionId));
         } else {
             $event->user->update([$lastSessionField => null]);
         }
