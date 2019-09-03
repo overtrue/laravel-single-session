@@ -3,7 +3,7 @@
     "description": "A plugin provide single session authentication for Laravel 5.",
     "type": "library",
     "require": {
-        "laravel/framework": "~5.5"
+        "laravel/framework": "~5.5 || ~6.0"
     },
     "license": "MIT",
     "authors": [
